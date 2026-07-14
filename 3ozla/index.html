@@ -11,7 +11,11 @@
 <link rel="preconnect" href="https://fonts.googleapis.com"/>
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Aref+Ruqaa:wght@400;700&family=Reem+Kufi:wght@400;500;600;700&family=Cairo:wght@300;400;500;600;700;800&display=swap"/>
-<script src="https://cdn.tailwindcss.com"></script>
+<script src="https://cdn.tailwindcss.com">
+document.querySelectorAll('.event-img').forEach(i=>i.onclick=()=>{lightbox.hidden=false;lightbox.style.display='flex';lightboxImg.src=i.src;});
+lightbox.onclick=()=>{lightbox.hidden=true;lightbox.style.display='none';};
+
+</script>
 <script>
 tailwind.config = {
   theme: {
@@ -124,6 +128,40 @@ tailwind.config = {
     </div>
     <div id="books" class="flex gap-6 overflow-x-auto pb-6 snap-x snap-mandatory scroll-smooth no-scrollbar"></div>
   </div>
+
+<!-- EVENTS -->
+<section class="mt-20">
+<div class="text-center mb-8">
+<p class="text-secondary text-sm">فعالياتنا</p>
+<h2 class="font-display text-4xl text-primary">الفعاليات</h2>
+<p class="mt-2 text-muted">صور من أنشطة مكتبة عُزلة.</p>
+</div>
+<div class="grid md:grid-cols-3 gap-6">
+<img src="event1.jpg" class="rounded-3xl shadow-soft cursor-pointer h-72 w-full object-contain event-img">
+<img src="event2.jpg" class="rounded-3xl shadow-soft cursor-pointer h-72 w-full object-contain event-img">
+<img src="event3.jpg" class="rounded-3xl shadow-soft cursor-pointer h-72 w-full object-contain event-img">
+<img src="event4.jpg" class="rounded-3xl shadow-soft cursor-pointer h-72 w-full object-contain event-img">
+<img src="event5.jpg" class="rounded-3xl shadow-soft cursor-pointer h-72 w-full object-contain event-img">
+<img src="event6.jpg" class="rounded-3xl shadow-soft cursor-pointer h-72 w-full object-contain event-img">
+<img src="event7.jpg" class="rounded-3xl shadow-soft cursor-pointer h-72 w-full object-contain event-img">
+<img src="event8.jpg" class="rounded-3xl shadow-soft cursor-pointer h-72 w-full object-contain event-img">
+<img src="event9.jpg" class="rounded-3xl shadow-soft cursor-pointer h-72 w-full object-contain event-img">
+<img src="event10.jpg" class="rounded-3xl shadow-soft cursor-pointer h-72 w-full object-contain event-img">
+<img src="event11.jpg" class="rounded-3xl shadow-soft cursor-pointer h-72 w-full object-contain event-img">
+</div>
+</section>
+<section class="mt-20 mb-20">
+<div class="text-center mb-8">
+<p class="text-secondary text-sm">القائمة</p>
+<h2 class="font-display text-4xl text-primary">المنيو</h2>
+</div>
+<img src="menu.jpg" class="rounded-3xl shadow-soft border border-border w-full max-w-4xl mx-auto cursor-pointer event-img">
+</section>
+<div id="lightbox" hidden style="position:fixed;inset:0;background:rgba(0,0,0,.85);display:flex;align-items:center;justify-content:center;z-index:9999">
+<img id="lightboxImg" style="max-width:90%;max-height:90%;border-radius:20px">
+</div>
+
+
 </section>
 
 <!-- COMMUNITY -->
